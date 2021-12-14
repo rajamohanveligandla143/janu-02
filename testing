@@ -1,0 +1,11 @@
+You create an Application Auto Scaling policy for your DynamoDB table.
+
+DynamoDB publishes consumed capacity metrics to Amazon CloudWatch.
+
+If the table's consumed capacity exceeds your target utilization (or falls below the target) for a specific length of time, Amazon CloudWatch triggers an alarm. You can view the alarm on the console and receive notifications using Amazon Simple Notification Service (Amazon SNS).
+
+The CloudWatch alarm invokes Application Auto Scaling to evaluate your scaling policy.
+
+Application Auto Scaling issues an UpdateTable request to adjust your table's provisioned throughput.
+
+DynamoDB processes the UpdateTable request, dynamically increasing (or decreasing) the table's provisioned throughput capacity so that it approaches your target utilizatio
